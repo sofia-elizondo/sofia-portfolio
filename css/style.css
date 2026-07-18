@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --paper: #FAF8F4;
-  --ink: #211F1C;
-  --ink-soft: #56524A;
-  --moss: #4B5D45;
-  --moss-deep: #38452F;
-  --clay: #A8674F;
-  --bloom: #E8A57C;
-  --sand: #ECE6D8;
-  --line: #DDD5C4;
+  --paper: #FFFFFF;
+  --ink: #16181D;              /* 15.8:1 on white */
+  --ink-soft: #4B5261;         /* 7.8:1 on white */
+  --teal: #0F9C8D;             /* decorative / large-scale use only */
+  --teal-deep: #0A6F64;        /* 6.1:1 on white — text-safe */
+  --teal-deeper: #085449;      /* button hover state */
+  --teal-tint: #E6F7F4;
+  --violet: #6D5BD0;           /* 5.2:1 on white — text-safe */
+  --violet-tint: #EFECFB;
+  --rose: #BE123C;             /* 6.3:1 on white — text-safe */
+  --rose-tint: #FCEAF0;
+  --amber: #B15E12;            /* 4.7:1 on white — text-safe */
+  --amber-tint: #FBEDDD;
+  --surface: #F5F6F8;
+  --line: #E1E4E9;
   --radius: 20px;
   --radius-sm: 12px;
   --radius-pill: 999px;
@@ -61,7 +67,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background: var(--sand);
+  background: var(--surface);
 }
 
 .nav .wrap {
@@ -72,7 +78,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 19px;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -98,7 +104,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--moss-deep);
+  color: var(--teal-deep);
 }
 
 .nav-toggle {
@@ -136,7 +142,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--moss-deep);
+  color: var(--teal-deep);
   display: inline-block;
   margin-bottom: 18px;
 }
@@ -166,7 +172,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.05;
@@ -176,12 +182,12 @@ a { color: inherit; text-decoration: none; }
 
 .hero h1 em {
   font-style: italic;
-  color: var(--moss-deep);
+  color: var(--teal-deep);
   font-weight: 400;
 }
 
 .hero-role {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
   font-size: clamp(22px, 3vw, 28px);
   color: var(--ink-soft);
@@ -216,16 +222,16 @@ a { color: inherit; text-decoration: none; }
 }
 
 .btn-primary {
-  background: var(--moss-deep);
+  background: var(--teal-deep);
   color: var(--paper);
 }
-.btn-primary:hover { background: var(--moss); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--teal-deeper); transform: translateY(-2px); }
 
 .btn-ghost {
   border: 1px solid var(--ink);
   color: var(--ink);
 }
-.btn-ghost:hover { border-color: var(--moss-deep); color: var(--moss-deep); transform: translateY(-2px); }
+.btn-ghost:hover { border-color: var(--teal-deep); color: var(--teal-deep); transform: translateY(-2px); }
 
 /* ---------- Section heading ---------- */
 .section-head {
@@ -238,7 +244,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section-head h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(28px, 4vw, 38px);
   margin: 0;
@@ -249,8 +255,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--moss-deep);
-  border-bottom: 1px solid var(--moss);
+  color: var(--teal-deep);
+  border-bottom: 1px solid var(--teal);
   padding-bottom: 2px;
   white-space: nowrap;
 }
@@ -282,7 +288,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .work-card:hover {
-  background: var(--sand);
+  background: var(--surface);
   transform: translateY(-4px);
   box-shadow: 0 16px 32px -20px rgba(33, 31, 28, 0.25);
 }
@@ -293,7 +299,7 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   margin-bottom: 24px;
   border-radius: var(--radius-sm);
-  background: var(--sand);
+  background: var(--surface);
 }
 
 .work-card .wc-tag {
@@ -301,8 +307,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--bloom);
-  background: rgba(232, 165, 124, 0.16);
+  color: var(--rose);
+  background: var(--rose-tint);
   padding: 4px 10px;
   border-radius: var(--radius-pill);
   margin-bottom: 14px;
@@ -310,7 +316,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .work-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 24px;
   margin: 0 0 10px;
@@ -329,7 +335,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: var(--moss-deep);
+  color: var(--teal-deep);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -341,7 +347,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- About teaser (home) ---------- */
 .about-teaser {
   padding: 90px 0;
-  background: var(--sand);
+  background: var(--surface);
   border-radius: 32px;
   margin: 0 24px;
   width: auto;
@@ -367,7 +373,7 @@ a { color: inherit; text-decoration: none; }
 
 .about-teaser blockquote {
   margin: 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: clamp(22px, 3vw, 30px);
@@ -393,7 +399,7 @@ footer.site-footer {
 }
 
 .footer-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 22px;
 }
 
@@ -414,7 +420,7 @@ footer.site-footer {
 }
 
 .footer-links a { color: var(--ink-soft); }
-.footer-links a:hover { color: var(--moss-deep); }
+.footer-links a:hover { color: var(--teal-deep); }
 
 /* ---------- Generic page header (about/work/contact) ---------- */
 .page-head {
@@ -423,7 +429,7 @@ footer.site-footer {
 }
 
 .page-head h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(38px, 5vw, 54px);
   margin: 0 0 18px;
@@ -459,7 +465,7 @@ footer.site-footer {
 }
 
 .about-body h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 26px;
   margin: 0 0 16px;
@@ -484,7 +490,7 @@ footer.site-footer {
 }
 
 .tool-card {
-  background: var(--sand);
+  background: var(--surface);
   border-radius: var(--radius-sm);
   padding: 24px 18px;
   text-align: center;
@@ -499,7 +505,7 @@ footer.site-footer {
 }
 
 .tool-card .tool-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   margin-bottom: 4px;
 }
@@ -518,7 +524,7 @@ footer.site-footer {
 .contact-page .wrap { max-width: 640px; }
 
 .contact-page h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(38px, 5vw, 54px);
   margin: 0 0 24px;
@@ -533,17 +539,17 @@ footer.site-footer {
 
 .contact-card {
   padding: 40px;
-  background: var(--sand);
+  background: var(--surface);
   border-radius: var(--radius);
 }
 
 .contact-card a.email {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
   font-size: clamp(22px, 4vw, 30px);
-  color: var(--moss-deep);
+  color: var(--teal-deep);
   word-break: break-word;
-  border-bottom: 1px solid var(--moss);
+  border-bottom: 1px solid var(--teal);
 }
 
 .contact-links {
@@ -561,7 +567,7 @@ footer.site-footer {
   border-bottom: 1px solid var(--line);
   padding-bottom: 2px;
 }
-.contact-links a:hover { color: var(--moss-deep); border-color: var(--moss); }
+.contact-links a:hover { color: var(--teal-deep); border-color: var(--teal); }
 
 /* ---------- Case study page ---------- */
 .case-hero {
@@ -594,7 +600,7 @@ footer.site-footer {
 }
 
 .case-hero h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(32px, 4.5vw, 48px);
   max-width: 780px;
@@ -620,7 +626,7 @@ footer.site-footer {
 .case-body .wrap { max-width: 760px; }
 
 .case-body h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 28px;
   margin: 56px 0 20px;
@@ -668,5 +674,5 @@ footer.site-footer {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
   color: var(--ink-soft);
-  background: var(--sand);
+  background: var(--surface);
 }
